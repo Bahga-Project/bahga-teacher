@@ -21,9 +21,8 @@ class _StudentsListScreenState extends State<StudentsListScreen> {
     "Mohamed Tarek",
     "Nour Ashraf",
     "Mohamed Anwar",
-    "",
-    "Nour Ashraf",
-    "Mohamed Anwar",
+    "Arwa Ahmed",
+    "Abdullah Mohamed",
 
   ];
 

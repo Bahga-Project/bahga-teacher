@@ -155,7 +155,7 @@ class _HomeContentState extends State<HomeContent> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "120",
+                            "14",
                             style: TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.bold,

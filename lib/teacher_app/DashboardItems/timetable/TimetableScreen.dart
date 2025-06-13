@@ -53,7 +53,7 @@ class _TimetableScreenState extends State<TimetableScreen> {
             child: timetableData[selectedDay]!.isEmpty
                 ? Center(
               child: Text(
-                (selectedDay == "Fri" || selectedDay == "Sat")
+                (selectedDay == "Fri" || selectedDay == "Thu")
                     ? "Holiday"
                     : "No classes for this day",
                 style: const TextStyle(fontSize: 16, color: AppColors.textColor_2),

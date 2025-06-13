@@ -18,10 +18,12 @@ class TimetableEntry {
 final Map<String, List<TimetableEntry>> timetableData = {
   "Sun": [],
   "Mon": [
-    TimetableEntry(startTime: "07:30 AM", endTime: "09:00 AM", subject: "Math", className: "3 C"),
+    TimetableEntry(startTime: "08:00 AM", endTime: "09:00 AM", subject: "Math", className: "3 C"),
     TimetableEntry(startTime: "09:00 AM", endTime: "10:00 AM", subject: "English", className: "1 B"),
-    TimetableEntry(startTime: "10:30 AM", endTime: "12:00 PM", subject: "Math", className: "2 A"),
-    TimetableEntry(startTime: "12:30 PM", endTime: "01:30 PM", subject: "English", className: "2 C"),
+    TimetableEntry(startTime: "10:00 AM", endTime: "11:00 PM", subject: "Arabic", className: "2 A"),
+    TimetableEntry(startTime: "12:00 PM", endTime: "01:00 PM", subject: "Biology", className: "2 C"),
+    TimetableEntry(startTime: "1:00 AM", endTime: "02:00 PM", subject: "Physics", className: "2 A"),
+    TimetableEntry(startTime: "12:00 PM", endTime: "01:00 PM", subject: "Arabic", className: "2 C"),
   ],
   "Tue": [
     TimetableEntry(startTime: "08:00 AM", endTime: "09:30 AM", subject: "English", className: "3 A"),
@@ -36,5 +38,14 @@ final Map<String, List<TimetableEntry>> timetableData = {
     TimetableEntry(startTime: "12:30 PM", endTime: "01:30 PM", subject: "English", className: "2 C"),
   ],
   "Fri": [],
-  "Sat": [],
+  "Sat": [
+
+    TimetableEntry(startTime: "09:00 AM", endTime: "10:00 AM", subject: "English", className: "1 B"),
+    TimetableEntry(startTime: "08:00 AM", endTime: "09:00 AM", subject: "Math", className: "3 C"),
+    TimetableEntry(startTime: "12:00 PM", endTime: "01:00 PM", subject: "Biology", className: "2 C"),
+    TimetableEntry(startTime: "10:00 AM", endTime: "11:00 PM", subject: "Arabic", className: "2 A"),
+    TimetableEntry(startTime: "1:00 AM", endTime: "02:00 PM", subject: "Physics", className: "2 A"),
+    TimetableEntry(startTime: "09:00 AM", endTime: "10:00 AM", subject: "English", className: "1 B"),
+    TimetableEntry(startTime: "12:00 PM", endTime: "01:00 PM", subject: "Arabic", className: "2 C"),
+  ],
 };

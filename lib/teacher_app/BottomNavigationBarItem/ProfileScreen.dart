@@ -5,13 +5,17 @@ import '../../Refactoration/Colors.dart';
 import '../../Refactoration/common_widgets.dart';
 
 class ProfileScreen extends StatelessWidget {
-  final String teacherName = "Mr. Ahmed Mohamed";
-  final String teacherEmail = "ahmed.mohamed@school.com";
-  final String teacherId = "TCH12345";
+  final String teacherName = "Ms:Aya Mohamed";
+  final String teacherEmail = "aya@gmail.com";
+  final String teacherId = "45000";
   final String profilePictureUrl = "assets/images/profile.jpg";
-  final String dateOfBirth = "01/01/1980";
-  final String gender = "Male";
+  final String dateOfBirth = "04/05/2003";
+  final String gender = "Female";
   final String address = "123 Cairo St, Egypt";
+
+
+
+
 
   const ProfileScreen({super.key});
 

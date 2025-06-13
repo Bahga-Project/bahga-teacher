@@ -34,26 +34,32 @@ class AttendanceData {
 
   final Map<String, List<String>> levelClasses = {
     'Level 1': ['1 A', '1 B', '1 C'],
-    'Level 2': ['2 D', '2 E'],
-    'Level 3': ['3 F', '3 G'],
+    'Level 2': ['2 A', '2 B'],
+    'Level 3': ['3 A', '3 B'],
   };
 
   final Map<String, List<String>> classStudents = {
     '1 A': [
-      'Ahmed Mohamed',
-      'Mohamed Nasser',
-      'Khalid Ali',
-      'Hayam Ahmed',
-      'Sara Ahmed',
-      'Hager Maher',
-      'Ali Mahmoud',
-      'Samar Ahmed',
+      "Aya Mohamed",
+      "Mohamed Mahmoud",
+      "Mawada Mahmoud",
+      "Judy Mahmoud",
+      "Elen Mohamed",
+      "Anas Soliman",
+      "Basmala Mahmoud",
+      "Hassan Abdelrahman",
+      "Aya Samir",
+      "Mohamed Tarek",
+      "Nour Ashraf",
+      "Mohamed Anwar",
+      "Arwa Ahmed",
+      "Abdullah Mohamed",
     ],
     '1 B': ['Student 1', 'Student 2', 'Student 3', 'Student 4'],
     '1 C': ['Student 1', 'Student 2', 'Student 3', 'Student 4', 'Student 5', 'Student 6', 'Student 7', 'Student 8'],
-    '2 D': ['Student 5', 'Student 6', 'Student 7', 'Student 8', 'Student 9', 'Student 10'],
-    '2 E': ['Student 7', 'Student 8', 'Student 9', 'Student 10'],
-    '3 F': ['Student 9', 'Student 10', 'Student 11'],
-    '3 G': ['Student 1', 'Student 2', 'Student 3', 'Student 4', 'Student 5', 'Student 6'],
+    '2 A': ['Student 5', 'Student 6', 'Student 7', 'Student 8', 'Student 9', 'Student 10'],
+    '2 B': ['Student 7', 'Student 8', 'Student 9', 'Student 10'],
+    '3 A': ['Student 9', 'Student 10', 'Student 11'],
+    '3 B': ['Student 1', 'Student 2', 'Student 3', 'Student 4', 'Student 5', 'Student 6'],
   };
 }
