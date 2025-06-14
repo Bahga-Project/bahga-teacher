@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../Refactoration/Colors.dart';
 import 'DashboardScreen.dart';
 import 'HomeContent.dart';
@@ -10,6 +11,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
@@ -17,6 +20,8 @@ class _HomePageState extends State<HomePage> {
     const DashboardScreen(),
     const ProfileScreen(),
   ];
+
+
 
   @override
   Widget build(BuildContext context) {

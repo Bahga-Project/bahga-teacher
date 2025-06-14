@@ -2,30 +2,36 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AuthService {
   final CollectionReference students =
-  FirebaseFirestore.instance.collection('students');
+  FirebaseFirestore.instance.collection('teachers');
 
-  Future<bool> login(String email, String password) async {
+  Future<Map<String, dynamic>> login(String email, String password) async {
     try {
-      // البحث عن الطالب باستخدام البريد الإلكتروني
-      QuerySnapshot query = await students.where('Email', isEqualTo: email).get();
+      // Query Firestore for a document with matching email
+      QuerySnapshot query =
+      await students.where('Email', isEqualTo: email).get();
 
       if (query.docs.isEmpty) {
-        return false; // البريد غير موجود
+        return {'isAuth': false, 'name': ''};
       }
 
-      // أخذ أول نتيجة (البريد الإلكتروني فريد)
+      // Assuming email is unique, take the first matching document
       DocumentSnapshot doc = query.docs.first;
       Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
 
-      // التحقق من كلمة المرور
+      // Check if password matches
       if (data['Password'] == password) {
-        return true;
+        return {
+          'isAuth': true,
+          'name': data['firstName'] + ' ' + data['lastName']
+        };
       }
     } catch (e) {
       print('Error during login: $e');
-      return false;
+      return {'isAuth': false, 'name': ''};
     }
 
-    return false; // كلمة المرور غير صحيحة
+    return {'isAuth': false, 'name': ''};
   }
+
+
 }

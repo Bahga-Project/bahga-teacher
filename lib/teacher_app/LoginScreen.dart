@@ -28,6 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
   void initState() {
     super.initState();
     _loadSavedData();
+    _resetUser();
   }
 
   Future<void> _loadSavedData() async {
@@ -53,6 +54,13 @@ class _LoginScreenState extends State<LoginScreen> {
       await prefs.remove('password');
     }
   }
+
+
+  Future<void> _resetUser() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.remove('name');
+  }
+
 
   @override
   void dispose() {
@@ -228,12 +236,18 @@ class _LoginScreenState extends State<LoginScreen> {
                                     if (_formKey.currentState!.validate()) {
                                       _saveData(); // لحفظ بيانات المستخدم لو مختار "Remember Me"
 
-                                      final success = await _authService.login(
-                                        _emailController.text.trim(),
-                                        _passwordController.text.trim(),
-                                      );
+                                      Map<String, dynamic> res = await _authService.login(
+                                          _emailController.text.trim(), _passwordController.text.trim());
 
-                                      if (success) {
+
+                                      // ✅ Instead, just navigate to the home screen directly
+                                      SharedPreferences prefs = await SharedPreferences.getInstance();
+
+
+                                      if (!res['isAuth']) {
+
+                                        prefs.setString('name', res['name']);
+
                                         // تسجيل الدخول ناجح
                                         Navigator.pushReplacement(
                                           context,

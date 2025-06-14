@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../Refactoration/Colors.dart';
 import '../../Refactoration/common_widgets.dart';
 import '../settings/NotificationsScreen.dart';
@@ -14,12 +15,27 @@ class HomeContent extends StatefulWidget {
 }
 
 class _HomeContentState extends State<HomeContent> {
+  String name = "Aya Mohamed";
+
   bool showAllCards = false;
 
+
+  @override
+  void initState() {
+    super.initState();
+    _loadSavedData();
+  }
 
   void toggleShowAllCards() {
     setState(() {
       showAllCards = !showAllCards;
+    });
+  }
+
+  Future<void> _loadSavedData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      name = prefs.getString('name') ?? "Aya Mohamed";
     });
   }
 
@@ -47,8 +63,8 @@ class _HomeContentState extends State<HomeContent> {
             );
           },
         ),
-        title: const Text(
-          "Welcome!\nTeacher Name",
+        title: Text(
+          "Welcome!\n "+ name,
           style: TextStyle(
             color: AppColors.white,
             fontSize: 18,
